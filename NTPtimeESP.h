@@ -40,6 +40,7 @@ class NTPtime {
     void printDateTime(strDateTime _dateTime);
     bool setSendInterval(unsigned long _sendInterval);  // in seconds
     bool setRecvTimeout(unsigned long _recvTimeout);    // in seconds
+    strDateTime ConvertUnixTimestamp( unsigned long _tempTimeStamp);
 
   private:
     bool _sendPhase;
@@ -47,7 +48,6 @@ class NTPtime {
     unsigned long _sendInterval;
     unsigned long _recvTimeout;
 
-    strDateTime ConvertUnixTimestamp( unsigned long _tempTimeStamp);
     boolean summerTime(unsigned long _timeStamp );
     boolean daylightSavingTime(unsigned long _timeStamp);
     unsigned long adjustTimeZone(unsigned long _timeStamp, float _timeZone, byte _DayLightSavingSaving);
